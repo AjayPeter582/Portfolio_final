@@ -1,0 +1,75 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+section h2 {
+    color: #ADFF2F;
+    font-size: 13em;
+    cursor: default;
+    margin-bottom: 20px;
+}
+
+/* Light Effect */
+/* Light Effect */
+.light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.1) 10%, rgba(0, 0, 0, 0.95) 20%);
+    background-size: 100% 100%;
+    transition: opacity 2s ease-in-out, background-size 2s ease-in-out;
+}
+
+
+/* Hide "Know About Me" initially */
+#moveCarBtn {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Show the button smoothly */
+#moveCarBtn.show {
+    opacity: 1;
+}
+
+/* Car Image */
+.car-image {
+    position: absolute;
+    width: 200px;
+    left: -20%; /* Start from the left */
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+/* Button Styles */
+button {
+    background: #ADFF2F;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #90EE90;
+}

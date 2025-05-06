@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #fff;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            cursor: url('/Images/transmission.png') 16 16, auto; /* Custom cursor */
+        }
+
+        a {
+            cursor: url('/Images/transmission.png') 16 16, auto;
+            text-decoration: none;
+        }
+
+        h2 {
+            color: rgb(51, 80, 44);
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .project-live-logo,
+        .project-github-logo {
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-live-logo:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 5px #00c3ff);
+        }
+
+        .project-github-logo:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 5px rgb(103, 5, 249));
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+    <h2>30+ Mini JavaScript Projects</h2>
+    <a href="https://ajaypeter582.github.io/Mini-Javascript-Projects/" target="_blank"><img class="project-live-logo" src="../Images/live_preview.png" style="width:25px;"></a>
+    <a href="https://github.com/AjayPeter582/Mini-Javascript-Projects" target="_blank"><img class="project-github-logo" src="../Images/github_projects.png" style="width:25px; margin-left:10px;"></a>
+    <p><strong>Tech Used:</strong> Vanilla JavaScript, HTML, CSS</p>
+    <p>Hands-on learning through mini projects like calculators, form validators, sliders, games, and more, all built using core JavaScript concepts.</p>
+
+    <h2>Atty - Chat App</h2>
+    <a href="https://github.com/AjayPeter582/Atty-theChatApp" target="_blank"><img class="project-github-logo" src="../Images/github_projects.png" style="width:25px;"></a>
+    <p><strong>Tech Used:</strong> React, Tailwind CSS, Daisy UI, Socket.io</p>
+    <p>A real-time messaging application supporting group chats, designed with elegant UI using Daisy UI and Tailwind CSS. Enables instant communication with Socket.io integration.</p>
+
+    <h2>Playhaven - Video Streaming Platform</h2>
+    <a href="https://ajaypeter582.github.io/Mini-Javascript-Projects/" target="_blank"><img class="project-live-logo" src="../Images/live_preview.png" style="width:25px;"></a>
+    <a href="https://github.com/AjayPeter582/Mini-Javascript-Projects" target="_blank"><img class="project-github-logo" src="../Images/github_projects.png" style="width:25px; margin-left:10px;"></a>
+    <p><strong>Tech Used:</strong> MERN stack, JWT Authentication, Subscriptions</p>
+    <p>Offers secure video streaming with flexible subscriptions and JWT-based login. Includes free-tier access and paid features. Optimized for performance and scalability.</p>
+
+    <h2>Attendance Management System</h2>
+    <p><strong>Tech Used:</strong> Java Swing, MySQL</p>
+    <p>Allows educators to manage and monitor attendance by section/date with a colorful GUI. Supports adding/removing students and retrieving past records.</p>
+
+    <h2>Placement Record Management System</h2>
+    <p><strong>Tech Used:</strong> JSP, MySQL</p>
+    <p>Secure web app where faculty manage placement records and students can view opportunities. Features login/registration with department-wise filtering.</p>
+
+    <script>
+        const body = document.querySelector('body');
+
+        document.addEventListener('click', () => {
+            body.style.cursor = "url('../Images/gear-shift.png') 16 16, auto";
+
+            // Restore cursor after 100ms
+            setTimeout(() => {
+                body.style.cursor = "url('../Images/transmission.png') 16 16, auto";
+            }, 100);
+        });
+    </script>
+</body>
+</html>

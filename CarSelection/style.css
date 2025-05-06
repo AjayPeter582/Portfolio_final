@@ -1,0 +1,46 @@
+body {
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: "Jersey 15", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 5em;
+    letter-spacing: 10px;
+    margin-bottom: 50px;
+}
+
+.car-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.car {
+    width: 300px;
+}
+
+.left-arrow, .right-arrow {
+    width: 80px;
+    cursor: pointer;
+    padding: 20px;
+    z-index: 10;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+    transform: scale(1.1);
+}
+
+.left-arrow:active, .right-arrow:active {
+    transform: scale(1.2);
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&family=Lexend+Giga:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="A.jpg" type="image/x-icon">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+    </head>
+    <body>
+        <header>
+            <div class="header-placeholder">
+                
+            </div>
+            <p>Ajay Peter</p>
+            <div class="header-option">
+                <img src="../Images/reload.png" alt="reload" class="reload" id="reload">
+                <img src="../Images/repairing-service.png" alt="settings" class="settings">
+            </div>
+        </header>
+        <div class="main-container">
+            <div class="car"></div>
+            <div class="container">
+                <div class="parking-lot" data-detail="education" style="top: 11%; left: 19%;">Education</div>
+                <div class="parking-lot" data-detail="resume" style="top: 11%; left: 45%;">Resume</div>
+                <div class="parking-lot" data-detail="internships" style="top: 11%; left: 58%;">Internships</div>
+                <div class="parking-lot" data-detail="projects" style="top: 63%; left: 32%;">Projects</div>
+                <div class="parking-lot" data-detail="skills" style="top: 63%; left: 45%;">SKills</div>
+                <div class="parking-lot" data-detail="contact" style="top: 63%; left: 71%;">Contact</div>
+                <div class="parking-lot" data-detail="about me" style="top: 11%; left: 71%;">About me</div>
+            </div>
+            <div class="information">
+            </div>
+        </div>
+        <div class="settings-menu-overlay" id="settingsMenu">
+            <div class="settings-menu">
+                <h2>Settings</h2>
+        
+                <div class="difficulty">
+                    <div class="label">Difficulty</div>
+                    <div class="controls">
+                        <img src="../Images/left.png" alt="decrease" id="decreaseDifficulty" class="control-icon">
+                        <button id="difficultyToggle">Easy</button>
+                        <img src="../Images/right.png" alt="increase" id="increaseDifficulty" class="control-icon">
+                    </div>
+                </div>
+        
+                <div class="speed">
+                    <div class="label">Speed</div>
+                    <div class="controls">
+                        <img src="../Images/left.png" alt="decrease" id="decreaseSpeed" class="control-icon">
+                        <input type="number" id="speedInput" value="0.5" min="0.5" max="10" step="0.5">
+                        <img src="../Images/right.png" alt="increase" id="increaseSpeed" class="control-icon">
+                    </div>
+                </div>
+                <button id="change-car">Change car</button>
+        
+                <div class="settings-buttons">
+                    <button id="resetSettings">Reset</button>
+                    <button id="closeSettings">Close</button>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <script src="index.js" defer></script>
+        <script>
+            const body = document.querySelector('body');
+    
+            document.addEventListener('click', () => {
+                body.style.cursor = "url('../Images/gear-shift.png') 16 16, auto";
+
+                // Restore cursor after 100ms
+                setTimeout(() => {
+                    body.style.cursor = "url('../Images/transmission.png') 16 16, auto";
+                }, 100);
+            });
+            $(document).ready(function() {
+                console.log("jQuery is working!");
+            });
+        </script>
+    </body>
+</html>

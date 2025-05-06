@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section>
+        <img class="car-image" src="Images/Cars/car1.png" alt="Car Image">
+        <h2>Portfolio</h2>
+        <button id="onLight">Light</button>
+        <button id="moveCarBtn">Know About Me</button>
+        <div class="light"></div>
+    </section>
+
+    <script type="text/javascript">
+const pos = document.documentElement;
+const light = document.querySelector(".light");
+const lightButton = document.getElementById("onLight");
+const knowMeButton = document.getElementById("moveCarBtn");
+
+let mouseMoved = false; 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    
+    pos.style.setProperty('--x', centerX + 'px');
+    pos.style.setProperty('--y', centerY + 'px');
+
+    light.style.opacity = "1"; 
+    light.style.display = "block";
+});
+
+// Start tracking mouse movement only after the first movement
+pos.addEventListener('mousemove', e => {
+    if (!mouseMoved) {
+        mouseMoved = true; // First mouse movement detected
+    }
+    
+    pos.style.setProperty('--x', e.clientX + 'px');
+    pos.style.setProperty('--y', e.clientY + 'px');
+});
+
+// Light Effect Animation
+lightButton.addEventListener("click", () => {
+    light.style.transition = "opacity 6s ease-out, background-size 6s ease-out";
+    light.style.opacity = "0";  
+    light.style.backgroundSize = "150% 150%"; 
+
+    lightButton.style.transition = "opacity 1s ease-in-out"; 
+    lightButton.style.opacity = "0"; // Fade out light button
+
+    setTimeout(() => {
+        lightButton.style.display = "none"; // Hide button after fade-out
+        knowMeButton.classList.add("show"); // Smoothly show "Know About Me" button
+    }, 1000); // Ensure smooth transition
+});
+
+// Car Animation
+const car = document.querySelector(".car-image");
+
+knowMeButton.addEventListener("click", () => {
+    car.style.transition = "left 2s ease-in-out";
+    car.style.left = "110%";  // Move car from left to right
+    setTimeout(() => {
+        window.location.href = "CarSelection/index.html"; // Navigate after animation
+    }, 2000);
+});
+
+    </script>
+</body>
+</html>
