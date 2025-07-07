@@ -35,4 +35,4 @@ A responsive and visually engaging car portfolio website built with **HTML**, **
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/your-username/portfolio_final.git
